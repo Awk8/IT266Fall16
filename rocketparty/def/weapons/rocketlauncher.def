@@ -316,12 +316,12 @@ entityDef weaponmod_rocketlauncher_homing
 entityDef projectile_rocket
 {
 	"spawnclass"				"idProjectile"
-	"size"						"12 12 12"
+	"size"						"20 20 20"
 	"cone"						"2"
 	"noshadows"					"1"
 	"clipmask_largeshot"		"1"
 								
-	"model"						"models/weapons/rocketlauncher/rocket.lwo"
+	"model"						"model_env_phone"
 	"def_damage"				"damage_rocketDirect"
 	"def_splash_damage"			"damage_rocketSplash"
 																											
