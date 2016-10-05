@@ -16,6 +16,42 @@
 
 
 riBuyingManager::riBuyingManager() :
+	// Need to fin correct place to put this if even required
+	//switch (opponentLevel)
+	//{
+	//	case 1:
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	case 0: 
+	//		opponentKillCashAward( 10 )
+	//		break;
+	//	default:
+	//		break;
+	//}
 	_buyingGameBalanceConstants( NULL ),
 	opponentKillCashAward( 0 ),
 	opponentKillFragCount( -1 ) { }
