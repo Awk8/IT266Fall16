@@ -253,6 +253,7 @@ public:
 	int						AmmoRegenStepForWeaponIndex( int weaponIndex );
 	int						AmmoRegenTimeForWeaponIndex( int weaponIndex );
 
+	int						HasMana( int index, int amount );
 	int						HasAmmo( int index, int amount );
 	bool					UseAmmo( int index, int amount );
 	int						HasAmmo( const char *weapon_classname );			// looks up the ammo information for the weapon class first

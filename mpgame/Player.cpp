@@ -64,6 +64,7 @@ const int SPECTATE_RAISE = 25;
 
 const int	HEALTH_PULSE		= 1000;			// Regen rate and heal leak rate (for health > 100)
 const int	ARMOR_PULSE			= 1000;			// armor ticking down due to being higher than maxarmor
+const int   MANA_REGEN_Pulse    = 1000;
 const int	AMMO_REGEN_PULSE	= 1000;			// ammo regen in Arena CTF
 const int	POWERUP_BLINKS		= 5;			// Number of times the powerup wear off sound plays
 const int	POWERUP_BLINK_TIME	= 1000;			// Time between powerup wear off sounds
@@ -1018,6 +1019,13 @@ void idInventory::Drop( const idDict &spawnArgs, const char *weapon_classname, i
 	weaponMods[weapon_index] = 0;
 }
 
+int idInventory::HasMana( int index, int amount )
+{
+	if (( index == 0 || !amount ))
+	{
+		
+	}
+}
 /*
 ===============
 idInventory::HasAmmo
