@@ -37,6 +37,7 @@ const int	FOCUS_USABLE_TIME			= 100;
 
 const int	MAX_WEAPONS					= 16;
 const int	MAX_AMMO					= 16;
+const int   MAX_MANA					= 16;
 const int	CARRYOVER_FLAG_AMMO			= 0x40000000;
 const int	CARRYOVER_FLAG_ARMOR_LIGHT	= 0x20000000;
 const int	CARRYOVER_FLAG_ARMOR_HEAVY	= 0x10000000;
@@ -203,6 +204,8 @@ public:
 	int						powerups;
 	int						armor;
 	int						maxarmor;
+	int						maxmana;	
+	int						mana[ MAX_MANA ];
 	int						ammo[ MAX_AMMO ];
 	int						clip[ MAX_WEAPONS ];
 	int						powerupEndTime[ POWERUP_MAX ];

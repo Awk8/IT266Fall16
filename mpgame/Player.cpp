@@ -64,7 +64,7 @@ const int SPECTATE_RAISE = 25;
 
 const int	HEALTH_PULSE		= 1000;			// Regen rate and heal leak rate (for health > 100)
 const int	ARMOR_PULSE			= 1000;			// armor ticking down due to being higher than maxarmor
-const int   MANA_REGEN_Pulse    = 1000;
+const int   MANA_REGEN_PULSE    = 1000;
 const int	AMMO_REGEN_PULSE	= 1000;			// ammo regen in Arena CTF
 const int	POWERUP_BLINKS		= 5;			// Number of times the powerup wear off sound plays
 const int	POWERUP_BLINK_TIME	= 1000;			// Time between powerup wear off sounds
@@ -269,6 +269,7 @@ void idInventory::GetPersistantData( idDict &dict ) {
 	idStr	key;
 	const idKeyValue *kv;
 	const char *name;
+	int lvl;
 
 	// armor
 	dict.SetInt( "armor", armor );
@@ -337,6 +338,7 @@ void idInventory::RestoreInventory( idPlayer *owner, const idDict &dict ) {
 	maxHealth		= dict.GetInt( "maxhealth", "100" );
 	armor			= dict.GetInt( "armor", "50" );
 	maxarmor		= dict.GetInt( "maxarmor", "100" );
+	maxmana			= dict.GetInt( "maxmana", "100" );
 
 	// ammo
 	for( i = 0; i < MAX_AMMOTYPES; i++ ) {
@@ -407,6 +409,9 @@ void idInventory::Save( idSaveGame *savefile ) const {
 		savefile->WriteInt( ammo[ i ] );
 	}
 
+	for( i = 0; i < MAX_MANA; i++ ) { //may not be necessary
+		savefile->WriteInt( mana[ i ] );
+	}
 	for( i = 0; i < MAX_WEAPONS; i++ ) {
 		savefile->WriteInt( clip[ i ] );
 		savefile->WriteInt( weaponMods[i] );
@@ -482,6 +487,7 @@ void idInventory::Restore( idRestoreGame *savefile ) {
 	savefile->ReadInt( powerups );
 	savefile->ReadInt( armor );
 	savefile->ReadInt( maxarmor );
+	savefile->ReadInt( maxmana );
 
 	for( i = 0; i < MAX_AMMO; i++ ) {
 		savefile->ReadInt( ammo[ i ] );
