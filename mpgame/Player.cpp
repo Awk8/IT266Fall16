@@ -1346,6 +1346,8 @@ idPlayer::idPlayer() {
 	teamHealthRegenPending	= false;
 	teamAmmoRegen			= NULL;
 	teamAmmoRegenPending	= false;
+	teamManaRegen			= NULL;
+	teamManaRegenPending	= false;
 	teamDoubler			= NULL;		
 	teamDoublerPending		= false;
 
@@ -1795,6 +1797,11 @@ void idPlayer::Init( void ) {
 		assert( teamAmmoRegen == NULL );
 		teamAmmoRegenPending = false;
 		teamAmmoRegen = PlayEffect( "fx_ammoregen", renderEntity.origin, renderEntity.axis, true );
+	}
+	if ( teamManaRegenPending ) {
+		assert( teamManaRegen == NULL );
+		teamManaRegenPending = false;
+		teamManaRegen = PlayEffect( "fx_ammoregen", renderEntity.origin, renderEntity.axis, true );
 	}
 	if ( teamDoublerPending ) {
 		assert( teamDoubler == NULL );

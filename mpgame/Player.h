@@ -965,6 +965,8 @@ private:
 	bool					teamHealthRegenPending;
 	rvClientEffectPtr		teamAmmoRegen;
 	bool					teamAmmoRegenPending;
+	rvClientEffectPtr		teamManaRegen;
+	bool					teamManaRegenPending;
 	rvClientEffectPtr		teamDoubler;
 	bool					teamDoublerPending;
 
